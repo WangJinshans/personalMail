@@ -1,4 +1,4 @@
-__version__ = '3.6.2'
+__version__ = '3.6.1'
 
 from typing import Tuple  # noqa
 
@@ -41,13 +41,13 @@ from .cookiejar import DummyCookieJar as DummyCookieJar
 from .formdata import FormData as FormData
 from .helpers import BasicAuth as BasicAuth
 from .helpers import ChainMapProxy as ChainMapProxy
-from .my_http import HttpVersion as HttpVersion
-from .my_http import HttpVersion10 as HttpVersion10
-from .my_http import HttpVersion11 as HttpVersion11
-from .my_http import WebSocketError as WebSocketError
-from .my_http import WSCloseCode as WSCloseCode
-from .my_http import WSMessage as WSMessage
-from .my_http import WSMsgType as WSMsgType
+from .http import HttpVersion as HttpVersion
+from .http import HttpVersion10 as HttpVersion10
+from .http import HttpVersion11 as HttpVersion11
+from .http import WebSocketError as WebSocketError
+from .http import WSCloseCode as WSCloseCode
+from .http import WSMessage as WSMessage
+from .http import WSMsgType as WSMsgType
 from .multipart import (
     BadContentDispositionHeader as BadContentDispositionHeader,
 )

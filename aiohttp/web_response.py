@@ -1,4 +1,3 @@
-# cython:language_level=3
 import asyncio  # noqa
 import collections.abc  # noqa
 import datetime
@@ -29,7 +28,7 @@ from multidict import CIMultiDict, istr
 from . import hdrs, payload
 from .abc import AbstractStreamWriter
 from .helpers import HeadersMixin, rfc822_formatted_time, sentinel
-from .my_http import RESPONSES, SERVER_SOFTWARE, HttpVersion10, HttpVersion11
+from .http import RESPONSES, SERVER_SOFTWARE, HttpVersion10, HttpVersion11
 from .payload import Payload
 from .typedefs import JSONEncoder, LooseHeaders
 

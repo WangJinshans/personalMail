@@ -1,4 +1,3 @@
-# cython:language_level=3
 import asyncio
 import logging
 import socket

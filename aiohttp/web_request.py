@@ -1,4 +1,3 @@
-# cython:language_level=3
 import asyncio
 import datetime
 import io
@@ -678,9 +677,6 @@ class BaseRequest(MutableMapping[str, Any], HeadersMixin):
 
     def __eq__(self, other: object) -> bool:
         return id(self) == id(other)
-
-    def __bool__(self) -> bool:
-        return True
 
     async def _prepare_hook(self, response: StreamResponse) -> None:
         return

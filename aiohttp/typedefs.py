@@ -1,4 +1,3 @@
-# cython:language_level=3
 import json
 import os  # noqa
 import pathlib  # noqa

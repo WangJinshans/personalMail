@@ -1,4 +1,3 @@
-# cython:language_level=3
 import asyncio
 import functools
 import random
@@ -53,7 +52,7 @@ from .helpers import (
     noop2,
     sentinel,
 )
-from .my_http import RESPONSES
+from .http import RESPONSES
 from .locks import EventResultOrError
 from .resolver import DefaultResolver
 
@@ -511,7 +510,6 @@ class BaseConnector:
                     await trace.send_connection_queued_end()
 
         proto = self._get(key)
-
         if proto is None:
             placeholder = cast(ResponseHandler, _TransportPlaceholder())
             self._acquired.add(placeholder)

@@ -82,7 +82,7 @@ from .helpers import (
     sentinel,
     strip_auth_from_url,
 )
-from .my_http import WS_KEY, HttpVersion, WebSocketReader, WebSocketWriter
+from .http import WS_KEY, HttpVersion, WebSocketReader, WebSocketWriter
 from .http_websocket import (  # noqa
     WSHandshakeError,
     WSMessage,
@@ -456,15 +456,7 @@ class ClientSession:
                         proxy = URL(proxy)
                     elif self._trust_env:
                         for scheme, proxy_info in proxies_from_env().items():
-                            # 不支持https 代理 转为http
-                            if url.scheme=='https':
-                            # if scheme == url.scheme:
-                                if scheme == 'http':
-                                    proxy = proxy_info.proxy
-                                    proxy_auth = proxy_info.proxy_auth
-                                    print('proxy is {}'.format(proxy_info))
-                                    break
-                            elif scheme == url.scheme:
+                            if scheme == url.scheme:
                                 proxy = proxy_info.proxy
                                 proxy_auth = proxy_info.proxy_auth
                                 break

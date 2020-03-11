@@ -1,4 +1,3 @@
-# cython:language_level=3
 import asyncio
 import asyncio.streams
 import traceback
@@ -23,7 +22,7 @@ import yarl
 from .abc import AbstractAccessLogger, AbstractStreamWriter
 from .base_protocol import BaseProtocol
 from .helpers import CeilTimeout, current_task
-from .my_http import (
+from .http import (
     HttpProcessingError,
     HttpRequestParser,
     HttpVersion10,

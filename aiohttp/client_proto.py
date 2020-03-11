@@ -10,7 +10,7 @@ from .client_exceptions import (
     ServerTimeoutError,
 )
 from .helpers import BaseTimerContext
-from .my_http import HttpResponseParser, RawResponseMessage
+from .http import HttpResponseParser, RawResponseMessage
 from .streams import EMPTY_PAYLOAD, DataQueue, StreamReader
 
 
@@ -176,8 +176,6 @@ class ResponseHandler(BaseProtocol,
             self._payload.set_exception(exc)
 
     def data_received(self, data: bytes) -> None:
-        self._reschedule_timeout()
-
         if not data:
             return
 

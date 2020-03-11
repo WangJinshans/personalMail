@@ -100,10 +100,7 @@ class WebSocketError(Exception):
 
     def __init__(self, code: int, message: str) -> None:
         self.code = code
-        super().__init__(code, message)
-
-    def __str__(self) -> str:
-        return self.args[1]
+        super().__init__(message)
 
 
 class WSHandshakeError(Exception):

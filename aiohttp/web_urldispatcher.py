@@ -37,7 +37,7 @@ from yarl import URL
 from . import hdrs
 from .abc import AbstractMatchInfo, AbstractRouter, AbstractView
 from .helpers import DEBUG
-from .my_http import HttpVersion11
+from .http import HttpVersion11
 from .typedefs import PathLike
 from .web_exceptions import (
     HTTPException,

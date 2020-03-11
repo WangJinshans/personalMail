@@ -37,7 +37,7 @@ from .abc import AbstractCookieJar
 from .client_reqrep import ClientResponse  # noqa
 from .client_ws import ClientWebSocketResponse  # noqa
 from .helpers import sentinel
-from .my_http import HttpVersion, RawRequestMessage
+from .http import HttpVersion, RawRequestMessage
 from .signals import Signal
 from .web import (
     Application,

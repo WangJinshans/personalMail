@@ -12,7 +12,7 @@ from multidict import CIMultiDict
 from . import hdrs
 from .abc import AbstractStreamWriter
 from .helpers import call_later, set_result
-from .my_http import (
+from .http import (
     WS_CLOSED_MESSAGE,
     WS_CLOSING_MESSAGE,
     WS_KEY,
@@ -21,8 +21,8 @@ from .my_http import (
     WebSocketWriter,
     WSMessage,
 )
-from .my_http import WSMsgType as WSMsgType
-from .my_http import ws_ext_gen, ws_ext_parse
+from .http import WSMsgType as WSMsgType
+from .http import ws_ext_gen, ws_ext_parse
 from .log import ws_logger
 from .streams import EofStream, FlowControlDataQueue
 from .typedefs import JSONDecoder, JSONEncoder

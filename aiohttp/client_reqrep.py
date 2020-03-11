@@ -1,4 +1,3 @@
-# cython:language_level=3
 import asyncio
 import codecs
 import io
@@ -48,7 +47,7 @@ from .helpers import (  # noqa
     reify,
     set_result,
 )
-from .my_http import SERVER_SOFTWARE, HttpVersion10, HttpVersion11, StreamWriter
+from .http import SERVER_SOFTWARE, HttpVersion10, HttpVersion11, StreamWriter
 from .log import client_logger
 from .streams import StreamReader  # noqa
 from .typedefs import (
@@ -781,7 +780,9 @@ class ClientResponse(HeadersMixin):
                 .decode('ascii')
         else:
             ascii_encodable_reason = self.reason
-        print('<ClientResponse({}) [{} {}]>'.format(ascii_encodable_url, self.status, ascii_encodable_reason),file=out)
+        print('<ClientResponse({}) [{} {}]>'.format(
+            ascii_encodable_url, self.status, ascii_encodable_reason),
+            file=out)
         print(self.headers, file=out)
         return out.getvalue()
 

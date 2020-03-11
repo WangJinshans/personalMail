@@ -8,7 +8,7 @@ import async_timeout
 from .client_exceptions import ClientError
 from .client_reqrep import ClientResponse
 from .helpers import call_later, set_result
-from .my_http import (
+from .http import (
     WS_CLOSED_MESSAGE,
     WS_CLOSING_MESSAGE,
     WebSocketError,

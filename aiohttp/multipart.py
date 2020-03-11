@@ -32,7 +32,7 @@ from .hdrs import (
     CONTENT_TYPE,
 )
 from .helpers import CHAR, TOKEN, parse_mimetype, reify
-from .my_http import HeadersParser
+from .http import HeadersParser
 from .payload import (
     JsonPayload,
     LookupError,
